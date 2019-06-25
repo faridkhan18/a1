@@ -59,6 +59,8 @@ export class ProductLisComponent {
         "imageUrl": "https://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
       }
   ];
+  imageWidth:number=50;
+  imageMargin:number=2;
 
 
 
