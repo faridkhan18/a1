@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IProduct } from './IProduct';
 
 @Component({
@@ -6,7 +6,10 @@ import { IProduct } from './IProduct';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductLisComponent {
+export class ProductLisComponent implements OnInit {
+    ngOnInit(): void {
+       console.log("from onInit");
+    }
   pageTitle:String = 'Product List';
   products:IProduct[]=[
     {
