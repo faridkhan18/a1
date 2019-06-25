@@ -64,6 +64,8 @@ export class ProductLisComponent {
   
   showImage:boolean=false;
 
+  listFilter:string ='cart';
+
   toggleImage(): void{
       this.showImage =!this.showImage;
   }
