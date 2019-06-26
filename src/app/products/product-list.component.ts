@@ -71,7 +71,7 @@ export class ProductLisComponent implements OnInit {
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;
-    listFilter: string = 'cart';
+    //listFilter: string = 'cart';
     filterProducts: IProduct[];
     _listFilter: string;
     toggleImage(): void {
