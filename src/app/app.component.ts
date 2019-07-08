@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title:String = 'Chetu Product Management';
+  pageTitle:String = 'Chetu Product Management';
 }

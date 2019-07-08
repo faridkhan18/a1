@@ -32,15 +32,19 @@
               <th>5 Star Rating</th>
             </tr>
           </thead>
-          <tbody *ngIf ='showImage'>
-              <tr *ngFor='let product of filterProducts'>
-                  <td>
+          <tbody >
+              <tr *ngFor='let product of filterProducts' >
+                  <td >
                       <img [src] ='product.imageUrl' 
                         [title] = 'product.productName |  uppercase '  
                          [style.width.px] ='imageWidth'
-                         [style.margin.px] ='imageMargin'> 
+                         [style.margin.px] ='imageMargin' *ngIf ='showImage'> 
                   </td>
-                  <td>{{product.productName}}</td>
+                  <td>
+                    <a [routerLink] = "['/products', product.productId]">
+                      {{product.productName}}
+                    </a>
+                  </td>
                   <td>{{product.productCode | convertToSpaces:'-' | uppercase}}</td>
                   <td>{{product.releaseDate}}</td>
                   <td>{{product.price | currency:'GBP':'symbol':'2.2-2' | lowercase}}</td>
