@@ -8,10 +8,21 @@ import { ProductService } from './product.service';
     styleUrls: ['./product-list.component.css']
 })
 export class ProductLisComponent implements OnInit {
+    errorMessage: any;
 
     ngOnInit(): void {
-        this.products =this.productService.getProducts();
-        this.filterProducts = this.products;
+        this.productService.getProducts().subscribe(
+            // happy path
+            products => {
+                this.products =products,
+                console.log(this.products.length)
+                this.filterProducts = this.products;
+            },
+            // :(
+            error => this.errorMessage = <any>error
+        );
+        //this.filterProducts = this.products;
+        
     }
     constructor(private productService:ProductService) {
         
